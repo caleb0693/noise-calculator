@@ -26,7 +26,6 @@ st.latex(selected_eq[1])
 
 # Input fields and calculation
 if selected_equation == "Sound Pressure Level":
-  st.title("Sound Pressure Level")
     P = st.number_input("Enter sound pressure (P):")
     Po = st.number_input("Enter reference pressure (Po):")
     if P and Po:
