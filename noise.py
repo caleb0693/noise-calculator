@@ -81,8 +81,8 @@ if selected_equation == "SPL over Distance":
     D1 = st.number_input("Enter original distance from source (D1):")
     D2 = st.number_input("Enter new distance from source (D2)")
     if SPL1 and D1 and D2:
-        SPL2 = SPL1 + 20 * math.log10(D2/D1)
-        st.latex(" SPL_2 = SPL_1 + 20 \\log_{10} \\left( \\frac{D_1}{D_1} \\right)")
+        SPL2 = SPL1 + 20 * math.log10(D1/D2)
+        st.latex(" SPL_2 = SPL_1 + 20 \\log_{10} \\left( \\frac{D_1}{D_2} \\right)")
         st.latex(" = {:.2f} \\text{{dB}}".format(SPL2))
     st.write("Where:")
     st.latex(" SPL_2 \\  is \\ the \\ sound \\ pressure \\ level \\ at \\ D2 ")
