@@ -10,7 +10,7 @@ st.write('###### Created by: Caleb Ginorio MS, CSP')
 # Create a list of tuples with title and equation
 equations = [("Sound Pressure Level", r"SPL = 20 \log \frac{P}{Po}"),
              ("Sound Intensity Level", r"Li = 10\log\frac{I}{Io}"), 
-             ("Sound Power Level", r"PWL = 10\log\frac{W}{Wo}"),
+             ("Sound Power Level", r"Lw = 10\log\frac{W}{Wo}"),
              ("SPL over Distance", r"SPL2 = SPL1 + 20\log\frac{D1}{D2}"),
              ("SPL over Distance in a Free Field", r"Lp = Lw - 20\log{r} + DI - k + CF"),
              ("Directivity Index", r"DI = 10\log{Q}")]
