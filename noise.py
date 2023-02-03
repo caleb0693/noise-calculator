@@ -3,8 +3,6 @@ import math
 import numpy as np
 
 
-
-
 st.title("Noise Equations")
 st.write('##### Created by: Caleb Ginorio MS, CSP')
 st.write('Select an equation from the side bar')
@@ -30,7 +28,6 @@ selected_equation = st.sidebar.selectbox("Select an equation:", [eq[0] for eq in
 
 # Find the selected equation using the title
 selected_eq = next(eq for eq in equations if eq[0] == selected_equation)
-
 
 
 # Input fields and calculation
@@ -116,13 +113,13 @@ if selected_equation == "SPL over Distance":
             SPL2 = float(SPL2)
             D1= float(D1)
             D2 = D1 / 10**((SPL2 - SPL1) / 20)
-            st.latex("D_2 = \\frac{{{:.2f}}}{{10^{{({:.2f} - {:.2f})/20}}}} = {:.2f} \\text{{distance units}}".format(D1, SPL2, SPL1, D2))
+            st.latex("D_2 = \\frac{{{:.2f}}}{{10^{{({:.2f} - {:.2f})/20}}}} = {:.2f} \\text{{units}}".format(D1, SPL2, SPL1, D2))
         elif SPL1 and SPL2 and D2:
             SPL1 = float(SPL1)
             SPL2 = float(SPL2)
             D2 =float(D2)
             D1 = D2 * 10**((SPL2 - SPL1) / 20)
-            st.latex("D_1 = {:.2f} * 10^{{({:.2f} - {:.2f})/20}} = {:.2f} \\text{{distance units}}".format(D2, SPL2, SPL1, D1))
+            st.latex("D_1 = {:.2f} * 10^{{({:.2f} - {:.2f})/20}} = {:.2f} \\text{{units}}".format(D2, SPL2, SPL1, D1))
         elif SPL1 and D1 and D2:
             SPL1 = float(SPL1)
             D1= float(D1)
@@ -135,12 +132,6 @@ if selected_equation == "SPL over Distance":
             D2 = float(D2)
             SPL1 = SPL2 - 20 * math.log10(D1 / D2)
             st.latex(" SPL_1 = {} - 20log({}/{}) = {:.2f} \\text{{dB}}".format(SPL2, D1, D2, SPL1))
-
-
-
-    #if SPL1 and D1 and D2:
-        #SPL2 = SPL1 + 20 * math.log10(D1/D2)
-        #st.latex(" SPL_2 = {} + 20log({}/{}) = {:.2f} \\text{{dB}}".format(SPL1, D1, D2, SPL2))
 
 
 if selected_equation == "Directivity Index":
