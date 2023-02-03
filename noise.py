@@ -104,7 +104,7 @@ if selected_equation == "SPL over Distance":
     SPL1 = st.text_input("Enter sound pressure level at D1 (SPL1):")
     SPL2 = st.text_input("Enter sound pressure level at D2 (SPL2):")
     D1 = st.text_input("Enter original distance from source (D1):")
-    D2 = st.text_input("Enter new distance from source (D2)","0")
+    D2 = st.text_input("Enter new distance from source (D2):")
     if SPL1 and SPL2 and D1 and D2:
         st.write("Enter only three out of the four variables.")
     else:
