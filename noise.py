@@ -135,10 +135,6 @@ if selected_equation == "SPL over Distance":
             D2 = float(D2)
             SPL1 = SPL2 - 20 * math.log10(D1 / D2)
             st.latex(" SPL_1 = {} - 20log({}/{}) = {:.2f} \\text{{dB}}".format(SPL2, D1, D2, SPL1))
-        st.write("SPL1 (dB):", SPL1)
-        st.write("SPL2 (dB):", SPL2)
-        st.write("d1 (m):", D1)
-        st.write("d2 (m):", D2)
 
 
 
