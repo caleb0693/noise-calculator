@@ -23,7 +23,7 @@ equations = [("Sound Pressure Level", r"SPL = 20 \log \left(\frac{P}{P_0}\right)
              ("TWA(eq)", r"TWA_{eq} = 10\log\frac{\%D}{100} + 85 dBA"),
              ("TWA", r"TWA = 16.61\log\frac{\%D}{100} + 90 dBA"),]
 
-col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
+col1, col2, col3, col4 = st.beta_columns(4)
 
 # Use the title as the label in the selectbox
 selected_equation = st.sidebar.selectbox("Select an equation:", [eq[0] for eq in equations])
