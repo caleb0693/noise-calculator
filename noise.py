@@ -134,7 +134,7 @@ if selected_equation == "Noise Dose":
     def dose(c, t):
         return 100 * sum(ci / ti for ci, ti in zip(c, t))
     st.write("### Dose Calculation")
-    n = st.number_input("How many C and T values do you want to enter?", step =1)
+    n = st.number_input("How many C and T values do you want to enter?",min_value=1, max_value=100, step =1)
     c = [st.text_input(f"Enter C{i}") for i in range(1, n + 1)]
     t = [st.text_input(f"Enter T{i}") for i in range(1, n + 1)]
     if all(c) and all(t):
