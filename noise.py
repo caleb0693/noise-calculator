@@ -6,8 +6,8 @@ import numpy as np
 
 
 st.title("Noise Equations")
-st.write('##### Created by: Caleb Ginorio MS, CSP')
-st.write('Please select an equation from the side bar')
+st.write('#### Created by: Caleb Ginorio MS, CSP')
+st.write('##### Please select an equation from the side bar')
 
 
 # Create a list of tuples with title and equation
